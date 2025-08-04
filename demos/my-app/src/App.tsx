@@ -1,7 +1,6 @@
-import EmployeeTable from "./Components/EmployeeTable";
+import EmployeeCard from "./Components/EmployeeCard";
 import Greeting from "./Components/Greeting";
 import ProfileCard from "./Components/ProfileCard";
-import Courses from "./Courses";
 
 function App() {
   return (
@@ -9,12 +8,19 @@ function App() {
       <h1>Welcome to My App</h1>
 
       <p>This is a simple React application.</p>
-      <Greeting name="Mohammed Iliyas" />
+      {/* <Greeting name="Mohammed Iliyas" />
       <ProfileCard
         name="Abdullah Askeri"
         role="Software Engineer"
         skills={["JavaScript", "React", "Node.js"]}
-      />  
+      />   */}
+
+      <EmployeeCard 
+        name="Abdullah Askeri"
+        designation="React Developer"
+        department="Engineering"
+        salary={1000000}
+        />
     </div>
   );
 }
