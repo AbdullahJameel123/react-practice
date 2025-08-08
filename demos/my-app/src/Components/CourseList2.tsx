@@ -24,8 +24,8 @@ function CourseList() {
 
   return (
     <div className="container py-5">
-      <div className="card p-4">
-        <h1 className="mb-4 text-warning">Available Courses</h1>
+      <div className="card p-4 ">
+        <h1 className="mb-4 text-info">Available Courses</h1>
         <div className="row g-4">
           {courses.map(function (course, idx) {
             return (

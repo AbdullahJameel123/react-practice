@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
-import UserDetails from "./Components/UserDetalils";
+import UserDetails from "./Components/UserDetailss";
 import Home from "./Components/Home";
 import ProfileCard from "./Components/ProfileCard";
 import NavBar from "./Components/NavBar";
@@ -10,6 +10,8 @@ import Instructors from "./Components/Instructors";
 import FeedBack from "./Components/FeedBack";
 import CourseList2 from "./Components/CourseList2";
 import ProductList from "./Components/ProductList";
+import PostList from "./Components/PostList";
+import UserList from "./Components/DummyUserList";
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
           <Route path="/feedback" element={<FeedBack />} />
           <Route path="/CourseList" element={<CourseList2 />} />
           <Route path="/ProductList" element={<ProductList />} />
+          <Route path="/PostList" element={<PostList />} />
+          <Route path="/UserList" element={<UserList />} />
           <Route
               path="/profile"
               element={

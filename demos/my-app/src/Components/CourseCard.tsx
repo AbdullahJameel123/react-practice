@@ -10,7 +10,7 @@ function CourseCard({ title, instructor, duration, topics }: CourseCardProps) {
     <div className="card h-100 bg-dark text-light shadow-sm border border-info">
       <div className="card-body">
         <h5 className="card-title text-info">{title}</h5>
-        <h6 className="card-subtitle mb-2 text-muted">Instructor: {instructor}</h6>
+        <h6 className="card-subtitle my-2 text-light">Instructor: {instructor}</h6>
         <p className="card-text">
           <strong>Duration:</strong> {duration} hours
         </p>

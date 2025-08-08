@@ -9,7 +9,7 @@ function NavBar() {
             <NavLink
               to="/"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               ReactApp
@@ -19,7 +19,7 @@ function NavBar() {
             <NavLink
               to="/about"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               About
@@ -29,7 +29,7 @@ function NavBar() {
             <NavLink
               to="/contact"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               Contact
@@ -39,7 +39,7 @@ function NavBar() {
             <NavLink
               to="/courses"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               Courses
@@ -49,7 +49,7 @@ function NavBar() {
             <NavLink
               to="/instructors"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               Our Instructors
@@ -59,7 +59,7 @@ function NavBar() {
             <NavLink
               to="/feedback"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               Feedback
@@ -69,7 +69,7 @@ function NavBar() {
             <NavLink
               to="/CourseList"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               CourseList
@@ -79,12 +79,33 @@ function NavBar() {
             <NavLink
               to="/ProductList"
               className={(navData) =>
-                "nav-link" + (navData.isActive ? " active text-warning" : "")
+                "nav-link" + (navData.isActive ? " active text-info" : "")
               }
             >
               ProductList
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              to="/PostList"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-info" : "")
+              }
+            >
+              PostList
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to="/UserList"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-info" : "")
+              }
+            >
+              UserList
+            </NavLink>
+          </li>
+         
         </ul>
       </div>
     </nav>
