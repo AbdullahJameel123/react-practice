@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import UserDetails from "./Components/UserDetailss";
@@ -11,8 +11,9 @@ import FeedBack from "./Components/FeedBack";
 import CourseList2 from "./Components/CourseList2";
 import ProductList from "./Components/ProductList";
 import PostList from "./Components/PostList";
-import UserList from "./Components/DummyUserList";
+import UserList from "./Components/UserList2";
 import ProductList2 from "./Components/ProductList2";
+import RecipeList from "./Components/RecipeList";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/PostList" element={<PostList />} />
           <Route path="/UserList" element={<UserList />} />
           <Route path="/ProductList2" element={<ProductList2 />} />
+          <Route path="/RecipeList" element={<RecipeList />} />
           <Route
               path="/profile"
               element={

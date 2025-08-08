@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Product = {
   id: number;
@@ -25,13 +25,15 @@ function ProductList2() {
     } finally {
       setLoading(false); // done loading
     }
-
   }
-  
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
-
 
   function truncateText(text: string, maxLength: number): string {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
@@ -41,29 +43,7 @@ function ProductList2() {
     <div className="container py-5">
       <div className="card p-4 bg-dark text-light shadow-lg border border-info">
         <h1 className="text-info mb-4">List of Products</h1>
-        <button
-          className="mb-4"
-          style={{
-            backgroundColor: "#0dcaf0",
-            border: "none",
-            padding: "0.5rem 1.2rem",
-            color: "#000",
-            fontWeight: "bold",
-            borderRadius: "0.3rem",
-            transition: "all 0.3s ease",
-            cursor: "pointer",
-          }}
-          onMouseEnter={(e) =>
-            (e.currentTarget.style.backgroundColor = "#31d2f2")
-          }
-          onMouseLeave={(e) =>
-            (e.currentTarget.style.backgroundColor = "#0dcaf0")
-          }
-          onClick={fetchProducts}
-          disabled={loading} // disable button during loading
-        >
-          {loading ? "Loading..." : "Fetch Products"}
-        </button>
+        
 
         <input
           type="text"
@@ -119,11 +99,10 @@ function ProductList2() {
           })}
 
           {filteredProducts.length === 0 && !loading && (
-  <div className="text-center text-warning fs-5 mt-4">
-    No products match your search.
-  </div>
-)}
-
+            <div className="text-center text-warning fs-5 mt-4">
+              No products match your search.
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Post = {
   userId: number;
@@ -16,13 +16,17 @@ function PostList() {
     setPosts(data);
   }
 
+  useEffect(() => {
+      fetchPosts();
+    }, []);
+
   return (
     <div className="container py-5">
       <div className="card p-4 bg-dark text-light shadow-lg border border-info">
         <h1 className="text-info mb-4">List of Posts from JSONPlaceholder</h1>
 
         {/* Styled Fetch Button */}
-        <button
+        {/* <button
           className="mb-4"
           style={{
             backgroundColor: "#0dcaf0", // Bootstrap info color
@@ -42,7 +46,7 @@ function PostList() {
           onClick={fetchPosts}
         >
           Fetch Posts
-        </button>
+        </button> */}
 
         {/* Posts Grid */}
         <div className="row g-4">

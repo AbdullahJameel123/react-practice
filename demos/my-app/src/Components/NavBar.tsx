@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -113,6 +113,16 @@ function NavBar() {
               }
             >
               ProductList
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to="/RecipeList"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-info" : "")
+              }
+            >
+              RecipeList
             </NavLink>
           </li>
          
