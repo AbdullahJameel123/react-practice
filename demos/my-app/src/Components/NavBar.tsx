@@ -105,6 +105,16 @@ function NavBar() {
               UserList
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              to="/ProductList2"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-info" : "")
+              }
+            >
+              ProductList
+            </NavLink>
+          </li>
          
         </ul>
       </div>

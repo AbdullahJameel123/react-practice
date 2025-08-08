@@ -12,6 +12,7 @@ import CourseList2 from "./Components/CourseList2";
 import ProductList from "./Components/ProductList";
 import PostList from "./Components/PostList";
 import UserList from "./Components/DummyUserList";
+import ProductList2 from "./Components/ProductList2";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/ProductList" element={<ProductList />} />
           <Route path="/PostList" element={<PostList />} />
           <Route path="/UserList" element={<UserList />} />
+          <Route path="/ProductList2" element={<ProductList2 />} />
           <Route
               path="/profile"
               element={
