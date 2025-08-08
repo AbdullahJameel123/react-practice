@@ -8,6 +8,8 @@ import NavBar from "./Components/NavBar";
 import Courses from "./Components/Courses";
 import Instructors from "./Components/Instructors";
 import FeedBack from "./Components/FeedBack";
+import CourseList2 from "./Components/CourseList2";
+import ProductList from "./Components/ProductList";
 
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
           <Route path="/users/:id" element={<UserDetails />} />
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/feedback" element={<FeedBack />} />
+          <Route path="/CourseList" element={<CourseList2 />} />
+          <Route path="/ProductList" element={<ProductList />} />
           <Route
               path="/profile"
               element={

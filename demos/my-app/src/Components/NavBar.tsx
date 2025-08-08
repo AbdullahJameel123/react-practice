@@ -65,6 +65,26 @@ function NavBar() {
               Feedback
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink
+              to="/CourseList"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-warning" : "")
+              }
+            >
+              CourseList
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to="/ProductList"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-warning" : "")
+              }
+            >
+              ProductList
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>
