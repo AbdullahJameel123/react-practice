@@ -1,0 +1,20 @@
+body {
+  background-color: #121212;
+}
+
+.glow-text {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.nav-hover {
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-hover:hover {
+  color: #0ff !important;
+  transform: scale(1.05);
+}
+
+.shadow-top {
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+}
