@@ -10,10 +10,10 @@ import Instructors from "./Components/Instructors";
 import FeedBack from "./Components/FeedBack";
 import CourseList2 from "./Components/CourseList2";
 import ProductList from "./Components/ProductList";
-import PostList from "./Components/PostList";
 import UserList from "./Components/UserList2";
 import ProductList2 from "./Components/ProductList2";
-import RecipeList from "./Components/RecipeList";
+import PostList4 from "./Components/PostList4";
+import RecipeList4 from "./Components/RecipeList4";
 
 
 function App() {
@@ -30,10 +30,10 @@ function App() {
           <Route path="/feedback" element={<FeedBack />} />
           <Route path="/CourseList" element={<CourseList2 />} />
           <Route path="/ProductList" element={<ProductList />} />
-          <Route path="/PostList" element={<PostList />} />
+          <Route path="/PostList" element={<PostList4 />} />
           <Route path="/UserList" element={<UserList />} />
           <Route path="/ProductList2" element={<ProductList2 />} />
-          <Route path="/RecipeList" element={<RecipeList />} />
+          <Route path="/RecipeList" element={<RecipeList4 />} />
           <Route
               path="/profile"
               element={
