@@ -9,11 +9,11 @@ import Courses from "./Components/Courses";
 import Instructors from "./Components/Instructors";
 import FeedBack from "./Components/FeedBack";
 import CourseList2 from "./Components/CourseList2";
-import ProductList from "./Components/ProductList";
 import UserList from "./Components/UserList2";
 import ProductList2 from "./Components/ProductList2";
 import PostList4 from "./Components/PostList4";
 import RecipeList4 from "./Components/RecipeList4";
+import SearchProducts from "./Components/SearchProducts";
 
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/feedback" element={<FeedBack />} />
           <Route path="/CourseList" element={<CourseList2 />} />
-          <Route path="/ProductList" element={<ProductList />} />
+          <Route path="/ProductList" element={<SearchProducts />} />
           <Route path="/PostList" element={<PostList4 />} />
           <Route path="/UserList" element={<UserList />} />
           <Route path="/ProductList2" element={<ProductList2 />} />
