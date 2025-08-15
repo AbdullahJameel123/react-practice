@@ -5,7 +5,7 @@ import UserDetails from "./Components/UserDetailss";
 import Home from "./Components/Home";
 import ProfileCard from "./Components/ProfileCard";
 import NavBar from "./Components/NavBar";
-import Courses from "./Components/Courses";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Instructors from "./Components/Instructors";
 import FeedBack from "./Components/FeedBack";
 import CourseList2 from "./Components/CourseList2";
@@ -14,6 +14,8 @@ import ProductList2 from "./Components/ProductList2";
 import PostList4 from "./Components/PostList4";
 import RecipeList4 from "./Components/RecipeList4";
 import SearchProducts from "./Components/SearchProducts";
+import CourseListMockAPI from "./Components/CourseListMockAPI";
+import AddCourse from "./Components/AddCourse";
 
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/courses" element={<Courses />} />
+          <Route path="/courses" element={<CourseListMockAPI />} />
           <Route path="/users/:id" element={<UserDetails />} />
           <Route path="/instructors" element={<Instructors />} />
           <Route path="/feedback" element={<FeedBack />} />
@@ -34,6 +36,7 @@ function App() {
           <Route path="/UserList" element={<UserList />} />
           <Route path="/ProductList2" element={<ProductList2 />} />
           <Route path="/RecipeList" element={<RecipeList4 />} />
+          <Route path="/add-course" element={<AddCourse />} />
           <Route
               path="/profile"
               element={
