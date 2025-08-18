@@ -16,6 +16,7 @@ import RecipeList4 from "./Components/RecipeList4";
 import SearchProducts from "./Components/SearchProducts";
 import CourseListMockAPI from "./Components/CourseListMockAPI";
 import AddCourse from "./Components/AddCourse";
+import EditCourse from "./Components/EditCourse";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/ProductList2" element={<ProductList2 />} />
           <Route path="/RecipeList" element={<RecipeList4 />} />
           <Route path="/add-course" element={<AddCourse />} />
+          <Route path="/edit-course/:id" element={<EditCourse />} />
           <Route
               path="/profile"
               element={

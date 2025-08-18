@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 type Course = {
-  id: string;
+  id: number;
   title: string;
   description: string;
   duration: string;
@@ -19,10 +19,17 @@ function CourseList() {
     setCourses(data);
   }
 
+  
   useEffect(() => {
     fetchCourses();
   }, []);
-
+  
+  async function deleteCourse(id: number) {
+    await fetch(`https://689dc5e2ce755fe69789f10f.mockapi.io/courses/courses/${id}`, {
+      method: "DELETE",
+    });
+    fetchCourses();
+  }
   return (
     <div className="container py-5">
       <div className="card bg-dark text-light shadow-lg border border-info">
@@ -60,10 +67,14 @@ function CourseList() {
                     </td>
                     <td>
                       <div className="d-flex justify-content-center gap-2">
+                        <Link to={`/edit-course/${course.id}`} className="ms-md-3">
                         <button className="btn btn-outline-warning btn-sm d-flex align-items-center">
                           <i className="bi bi-pencil-square me-1"></i> Edit
                         </button>
-                        <button className="btn btn-outline-danger btn-sm d-flex align-items-center">
+                        </Link>
+                        <button className="btn btn-outline-danger btn-sm d-flex align-items-center"
+                          onClick={() => deleteCourse(course.id)}
+                        >
                           <i className="bi bi-trash me-1"></i> Delete
                         </button>
                       </div>
