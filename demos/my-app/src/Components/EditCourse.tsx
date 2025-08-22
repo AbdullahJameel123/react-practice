@@ -8,7 +8,7 @@ interface Course {
   duration: number;
 }
 
-const API_URL = "https://689dc5e2ce755fe69789f10f.mockapi.io/courses/courses";
+const API_URL = "https://689dc5e2ce755fe69789f10f.mockapi.io/courses";
 
 
 function EditCourse() {

@@ -13,7 +13,7 @@ function CourseList() {
 
   async function fetchCourses(): Promise<void> {
     const response = await fetch(
-      "https://689dc5e2ce755fe69789f10f.mockapi.io/courses/courses"
+      "https://689dc5e2ce755fe69789f10f.mockapi.io/courses"
     );
     const data: Course[] = await response.json();
     setCourses(data);
@@ -25,7 +25,7 @@ function CourseList() {
   }, []);
   
   async function deleteCourse(id: number) {
-    await fetch(`https://689dc5e2ce755fe69789f10f.mockapi.io/courses/courses/${id}`, {
+    await fetch(`https://689dc5e2ce755fe69789f10f.mockapi.io/courses/${id}`, {
       method: "DELETE",
     });
     fetchCourses();

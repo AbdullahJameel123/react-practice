@@ -97,7 +97,7 @@ function NavBar() {
           </li>
           <li className="nav-item">
             <NavLink
-              to="/UserList"
+              to="/login"
               className={(navData) =>
                 "nav-link" + (navData.isActive ? " active text-info" : "")
               }
@@ -123,6 +123,16 @@ function NavBar() {
               }
             >
               RecipeList
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to="/customers"
+              className={(navData) =>
+                "nav-link" + (navData.isActive ? " active text-info" : "")
+              }
+            >
+              CustomerList
             </NavLink>
           </li>
          

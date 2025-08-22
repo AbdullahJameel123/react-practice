@@ -9,7 +9,6 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Instructors from "./Components/Instructors";
 import FeedBack from "./Components/FeedBack";
 import CourseList2 from "./Components/CourseList2";
-import UserList from "./Components/UserList2";
 import ProductList2 from "./Components/ProductList2";
 import PostList4 from "./Components/PostList4";
 import RecipeList4 from "./Components/RecipeList4";
@@ -17,6 +16,11 @@ import SearchProducts from "./Components/SearchProducts";
 import CourseListMockAPI from "./Components/CourseListMockAPI";
 import AddCourse from "./Components/AddCourse";
 import EditCourse from "./Components/EditCourse";
+import CustomerList from "./Components/CustomerList";
+import CustomerAdd from "./Components/CustomerAdd";
+import CustomerEdit from "./Components/CustomerEdit";
+import Login from "./Components/LoginForm";
+
 
 
 function App() {
@@ -34,11 +38,14 @@ function App() {
           <Route path="/CourseList" element={<CourseList2 />} />
           <Route path="/ProductList" element={<SearchProducts />} />
           <Route path="/PostList" element={<PostList4 />} />
-          <Route path="/UserList" element={<UserList />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/ProductList2" element={<ProductList2 />} />
           <Route path="/RecipeList" element={<RecipeList4 />} />
           <Route path="/add-course" element={<AddCourse />} />
           <Route path="/edit-course/:id" element={<EditCourse />} />
+          <Route path="/customers" element={<CustomerList />} />
+          <Route path="/customers/add" element={<CustomerAdd />} />
+          <Route path="/customers/edit/:id" element={<CustomerEdit />} />
           <Route
               path="/profile"
               element={
