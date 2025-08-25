@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ThemeContext from "../contex/ThemeContext";
+import ThemeContext from "../context/ThemeContext";
 
 function ThemedCard() {
   const { theme } = useContext(ThemeContext);

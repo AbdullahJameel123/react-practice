@@ -20,13 +20,19 @@ import CustomerList from "./Components/CustomerList";
 import CustomerAdd from "./Components/CustomerAdd";
 import CustomerEdit from "./Components/CustomerEdit";
 import Login from "./Components/LoginForm";
+import ThemeProvider from "./context/ThemeProvider";
+import ThemeToggler from "./Components/ThemeToggler";
 
 
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
+      <ThemeProvider>
+
+        <NavBar />
+        <ThemeToggler />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -43,22 +49,30 @@ function App() {
           <Route path="/RecipeList" element={<RecipeList4 />} />
           <Route path="/add-course" element={<AddCourse />} />
           <Route path="/edit-course/:id" element={<EditCourse />} />
-          <Route path="/customers" element={<CustomerList />} />
+          <Route
+            path="/customers"
+            element={
+              <CustomerList />
+
+            }
+          />
           <Route path="/customers/add" element={<CustomerAdd />} />
           <Route path="/customers/edit/:id" element={<CustomerEdit />} />
           <Route
-              path="/profile"
-              element={
-                <ProfileCard
-                  name="Usman Ghani"
-                  role="UI/UX Designer"
-                  skills={["HTML", "CSS"]}
-                />
-              }
-            />
+            path="/profile"
+            element={
+              <ProfileCard
+                name="Usman Ghani"
+                role="UI/UX Designer"
+                skills={["HTML", "CSS"]}
+              />
+            }
+          />
         </Routes>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }
 
 export default App;
+
